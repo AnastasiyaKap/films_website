@@ -1,0 +1,46 @@
+.information_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 20%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.text {
+  width: 50%;
+  padding-left: 40px;
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.visibleLeft {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.visibleRight {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.text h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
