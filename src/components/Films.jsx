@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import SingleCard from "./SingleCard";
 
-function Films() {
+function Films({films}) {
+
   return (
-    <div>
-      <h1>Films</h1>
+    <div className="cards">
+      {films.map((film) => (
+        <SingleCard props={film} key={film.id} />
+      ))}
     </div>
   );
 }

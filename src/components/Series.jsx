@@ -1,8 +1,7 @@
-import React from 'react';
-import SingleCard from './SingleCard';
-import series from '../data/series';
+import React from "react";
+import SingleCard from "./SingleCard";
 
-function Series() {
+function Series({ series }) {
   return (
     <>
       <div className="cards">

@@ -1,0 +1,23 @@
+.card {
+  width: 16rem;
+  height: 420px;
+}
+
+.image {
+  height: 80%;
+}
+
+.link {
+  color: white;
+}
+
+.title {
+  font-size: 18px;
+  margin-top: 8px;
+  height: 30px;
+  width: 100%;
+}
+
+.button {
+  margin-top: 20px;
+}
