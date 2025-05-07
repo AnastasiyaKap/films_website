@@ -6,7 +6,7 @@ function Cartoons({ cartoons }) {
     <>
       <div className="cards">
         {cartoons.map((cartoon) => (
-          <SingleCard props={cartoon} key={cartoon.id} />
+          <SingleCard props={cartoon} key={cartoon.id} flag />
         ))}
       </div>
     </>

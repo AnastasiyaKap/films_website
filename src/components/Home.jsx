@@ -15,7 +15,7 @@ const Home = ({ films, series, cartoons }) => {
   return (
     <>
       <div className={styles.carousel}>
-        <h1 className={styles.homeH1}>Популярное</h1>
+        <h3 className={styles.homeH1}>Популярное</h3>
         <Carousel activeIndex={index} onSelect={handleSelect}>
           {popular.map((slide, slideIndex) => (
             <Carousel.Item key={slideIndex}>

@@ -6,7 +6,7 @@ function Series({ series }) {
     <>
       <div className="cards">
         {series.map((serial) => (
-          <SingleCard props={serial} key={serial.id} />
+          <SingleCard props={serial} key={serial.id} flag />
         ))}
       </div>
     </>

@@ -1,37 +1,71 @@
 .homeH1 {
   text-align: center;
   padding-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: aliceblue;
 }
-.imgCarousel {
-  width: 220px;
-  height: 320px;
-}
-.carouselDiv {
-  gap: 90px;
-  margin-bottom: 60px;
-}
-.allItems {
-  background-color: rgba(6, 7, 7, 0.541);
-  display: grid;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  justify-items: center;
 
-  grid-template-columns: repeat(5, 15%);
-  grid-template-rows: repeat(3, 300px);
-  padding-top: 30px;
-}
-.imgFigure {
-  width: 180px;
-  height: 250px;
-}
 .carousel {
   background-color: rgb(8, 8, 8);
+}
+@media (min-width: 578px) {
+  .allItems {
+    background-color: rgba(6, 7, 7, 0.541);
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 150px);
+    padding-top: 30px;
+    gap: 10px;
+  }
+  .imgFigure {
+    width: 110px;
+    height: 140px;
+  }
+  .carouselDiv {
+    gap: 10px;
+    margin-bottom: 60px;
+  }
+  .imgCarousel {
+    width: 140px;
+    height: 180px;
+  }
+  .caption {
+    font-size:9px;
+  }
+
 }
 .caption {
   color: aliceblue;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .allItems {
+    background-color: rgba(6, 7, 7, 0.541);
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 150px);
+    padding-top: 50px;
+    gap: 10px;
+  }
+
+  .imgFigure {
+    width: 280px;
+    height: 200px;
+  }
+
+  .imgCarousel {
+    width: 150px;
+    height: 140px;
+  }
+  .carouselDiv {
+    gap: 5px;
+    margin-bottom: 40px;
+  }
 }

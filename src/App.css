@@ -16,49 +16,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+a {
+  text-decoration: none;
+  color: rgb(200, 200, 214);
+}
 nav {
-  height: 40px;
-  padding-top: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   background-color: rgba(6, 7, 7, 0.541);
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
 }
-a {
-  text-decoration: none;
-  font-size: 18px;
-  color: rgb(200, 200, 214);
+.cards {
+  margin: 30px auto;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 10px;
+}
+@media (min-width: 578px) {
+  a {
+    font-size: 12px;
+  }
+  .courseLink {
+    font-size: 12px;
+    text-decoration: none;
+  }
+  nav {
+    max-height: 40px;
+    gap: 20px;
+  }
+.cards{
+    grid-template-columns: repeat(3, 140px);
+    grid-template-rows: repeat(2, 260px);
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  a {
+    font-size: 8px;
+  }
+
+  nav {
+    max-height: 30px;
+    gap: 5px;
+  }
+
+  .cards{
+    grid-template-columns: repeat(1, 230px);
+    row-gap: 20px;
+  }
 }
 .active {
   color: rgb(31, 33, 36);
   text-decoration: none;
 }
 
-.courseLink {
-  font-size: 25px;
-  text-decoration: none;
-}
 .courseLink:hover {
   text-decoration: underline;
 }
 .courseDiv {
   margin-top: 10px;
 }
-.cards {
-  margin-top: 40px;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 40px;
-  row-gap: 30px;
-}
-button {
-  margin-top: 6px;
-}
-/* img {
-  width: 150px;
-  height: 200px;
-} */
+
+

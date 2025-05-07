@@ -9,8 +9,9 @@ function Menu() {
       </NavLink>
       <NavLink to="films">Фильмы</NavLink>
       <NavLink to="series">Сериалы</NavLink>
-      <NavLink to="cartoons">Мультики</NavLink>
+      <NavLink to="cartoons">Мультфильмы</NavLink>
       <NavLink to="add-new">Добавить новое</NavLink>
+      <NavLink to="favorites">Избранное</NavLink>
     </nav>
   );
 }

@@ -50,11 +50,10 @@ const AddNew = ({
           Тип:
           <select value={type} onChange={(e) => setType(e.target.value)}>
             <option value="films">Фильм</option>
-            <option value="cartoons">Мультики</option>
+            <option value="cartoons">Мультфильмы</option>
             <option value="series">Сериалы</option>
           </select>
         </label>
-        <br />
         <label className={styles.label}>
           Название:
           <input
@@ -62,6 +61,7 @@ const AddNew = ({
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            required
           ></input>
         </label>
         <label className={styles.label}>
@@ -71,6 +71,7 @@ const AddNew = ({
             type="text"
             value={slug}
             onChange={(e) => setSlug(e.target.value)}
+            required
           ></input>
         </label>
         <label className={styles.label}>
@@ -80,6 +81,7 @@ const AddNew = ({
             type="text"
             value={image}
             onChange={(e) => setImgUrl(e.target.value)}
+            required
           ></input>
         </label>
         <button type="submit" className={styles.button}>
