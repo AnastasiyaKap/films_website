@@ -1,0 +1,44 @@
+.form {
+  max-width:220px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size:11px;
+}
+.divForm {
+  background-color: rgb(104, 80, 80, 0.3);
+  max-width: 280px;
+  height: 220px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+}
+
+.button {
+  width: 70%;
+  margin-top: 25px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgb(219, 202, 176);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button:hover {
+  background-color: rgb(109, 100, 87);
+  border-radius: 10px;
+}

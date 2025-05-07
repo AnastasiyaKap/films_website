@@ -1,13 +1,12 @@
-import React from 'react';
-import SingleCard from './SingleCard';
-import series from '../data/series';
+import React from "react";
+import SingleCard from "./SingleCard";
 
-function Series() {
+function Series({ series }) {
   return (
     <>
       <div className="cards">
         {series.map((serial) => (
-          <SingleCard props={serial} key={serial.id} />
+          <SingleCard props={serial} key={serial.id} flag />
         ))}
       </div>
     </>

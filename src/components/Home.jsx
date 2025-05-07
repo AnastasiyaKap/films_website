@@ -1,46 +1,44 @@
-import React, { useEffect, useState } from 'react';
-// import './App.css'; // Подключаем стили
-import big_lies from '../data/big_lies';
+import { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import "bootstrap/dist/css/bootstrap.min.css";
+import popular from "../data/popular";
+import AllItems from "./AllItems";
+import styles from "./styles/Home.module.css";
 
-const Home = () => {
-  const [visibleSections, setVisibleSections] = useState([]);
+const Home = ({ films, series, cartoons }) => {
+  const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisibleSections((prev) => [
-              ...new Set([...prev, entry.target.dataset.id]),
-            ]);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    document
-      .querySelectorAll('.section')
-      .forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
 
   return (
-    <div className="container">
-      {big_lies.map((section) => (
-        <div
-          key={section.id}
-          data-id={section.id}
-          className={`section ${
-            visibleSections.includes(section.id.toString()) ? 'visible' : ''
-          }`}
-          style={{ backgroundImage: `url(${section.img})` }}
-        >
-          <div className="text">{section.text}</div>
-        </div>
-      ))}
-    </div>
+    <>
+      <div className={styles.carousel}>
+        <h3 className={styles.homeH1}>Популярное</h3>
+        <Carousel activeIndex={index} onSelect={handleSelect}>
+          {popular.map((slide, slideIndex) => (
+            <Carousel.Item key={slideIndex}>
+              <div
+                className={`d-flex justify-content-center ${styles.carouselDiv}`}
+              >
+                {slide.map((img, imgIndex) => (
+                  <img
+                    key={imgIndex}
+                    src={img}
+                    alt={`${slideIndex} is ${imgIndex}`}
+                    className={`d-block ${styles.imgCarousel}`}
+                  />
+                ))}
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+      <div className={styles.allItems}>
+        <AllItems films={films} series={series} cartoons={cartoons} />
+      </div>
+    </>
   );
 };
 

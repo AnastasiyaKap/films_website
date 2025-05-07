@@ -1,13 +1,12 @@
-import React from 'react';
-import SingleCard from './SingleCard';
-import cartoons from '../data/cartoons';
+import React from "react";
+import SingleCard from "./SingleCard";
 
-function Cartoons() {
+function Cartoons({ cartoons }) {
   return (
     <>
       <div className="cards">
         {cartoons.map((cartoon) => (
-          <SingleCard props={cartoon} key={cartoon.id} />
+          <SingleCard props={cartoon} key={cartoon.id} flag />
         ))}
       </div>
     </>
